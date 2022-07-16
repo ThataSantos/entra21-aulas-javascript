@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Aula02</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body class="container bg-black">
+  <div class="card bg-black" style="color: white;">
+    <h1 style="color: white;">A maior parte está no console</h1>
+
+  </div>
+  <section class="row">
+    <div class="card bg-black">
+      <div class="col">
+        <card-body>
+          <button onclick="definirArray()" class="btn btn-outline-primary">aprender a definir um array</button>
+          <button class="btn btn-danger" onmouseover="definirArray()">Passe o mouse aqui</button>
+          <p style="color: white; font-weight: bolder;" onclick="alertar('onclick em qualquer lugar funciona')"> Clique
+            aqui</p>
+          <button onclick="incluirArrays(prompt('Informe seu nome'))" class="btn btn-primary">Inseri itens no
+            Array</button>
+          <button onclick="listarFor()">Listar com for</button>
+        </card-body>
+
+      </div>
+  </section>
+  <section class="row">
+    <div class="card bg-black" style="color: white; font-weight: bolder;">
+      <div class="card-body">
+        <button class="btn btn-dark" onclick="calcular('+')">+</button>
+
+        <button class="btn btn-dark" onclick="calcular('-')">-</button>
+
+        <button class="btn btn-dark" onclick="calcular('*')">*</button>
+
+        <button class="btn btn-dark" onclick="calcular('/')">/</button>
+
+        <button class="btn btn-dark" onclick="calcular('Merendar')">Merendar</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="/js/aula02.js"></script>
+  <script src="/js/aula02_arrays.js"></script>
+  <script src="/js/calculadora.js"></script>
+</body>
+
+</html>

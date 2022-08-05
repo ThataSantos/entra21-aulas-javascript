@@ -5,24 +5,23 @@ let pessoas = [];
 let update = null;
 
 $("form").on("submit", function (event) {
-    event.preventDefault();
-    let dados = obterDados();
-    console.log("Recebi", dados);
+  event.preventDefault();
+  let dados = obterDados();
 
-    if ($("#add").is(":visible")) {
-        pessoas.push(dados);
-        console.log(pessoas);
-        escreverTabela();
-        console.log("Added");
-    } else {
-        pessoas[pessoas.indexOf(update)] = dados;
-        $("#add").toggle();
-        $("#update").toggle();
-        console.log("Updated");
-    }
-    
-    $("#clean").click();
+  if ($("#add").is(":visible")) {
+    pessoas.push(dados);
+
+    console.log("Added");
+  } else {
+    pessoas[pessoas.indexOf(update)] = dados;
+    $("#add").toggle();
+    $("#update").toggle();
+    console.log("Updated");
+  }
+  escreverTabela();
+  $("#clean").click();
 });
+
 
 function obterDados() {
     let nome = $("#nome").val();
@@ -37,30 +36,42 @@ function obterDados() {
     console.log("recebi", nome, idade, cidade);
 }
 
-function escreverTabela() {
-    $("tbody").empty();
+$("#clean").on("click", function () {
+    $("#add").show();
+    $("#update").hide();
+  });
 
+  function escreverTabela() {
+    $("tbody").empty();
+  
     pessoas.forEach((pessoa) => {
-        $("tbody").append(
-            $("<tr>").append(
-                $("<td>", { text: pessoa.nome }),
-                $("<td>", { text: pessoa.idade }),
-                $("<td>", { text: pessoa.cidade }),
-                $("<td>").append(
-                    $("<button>", {
-                        text: "Edit",
-                        class: "btn btn-outline-primary",
-                        click: function () {
-                            update = pessoa;
-                            $("#nome").val(pessoa.nome);
-                            $("#idade").val(pessoa.idade);
-                            $("#add").hide();
-                            $("#update").show();
-                        },
-                    }),
-                   
-                )
-            )
-        );
+      $("tbody").append(
+        $("<tr>").append(
+          $("<td>", { text: pessoa.nome }),
+          $("<td>", { text: pessoa.idade }),
+          $("<td>", { text: pessoa.cidade }),
+          $("<td>").append(
+            $("<button>", {
+              text: "Edit",
+              class: "btn btn-outline-primary",
+              click: function () {
+                update = pessoa;
+                $("#nome").val(pessoa.nome);
+                $("#idade").val(pessoa.idade);
+                $("#add").toggle();
+                $("#update").toggle();
+              },
+            }),
+            $("<button>", {
+              text: "Delete",
+              class: "btn btn-outline-danger",
+              click: function () {
+                pessoas.splice(pessoas.indexOf(pessoa), 1);
+                escreverTabela();
+              },
+            })
+          )
+        )
+      );
     });
 }

@@ -2,7 +2,7 @@
 // $("#update").hide();
 // let pessoas = [];
 // let update = null;
-escreverTabela();
+// escreverTabela();
 
 // $("form").on("submit", function (event) {
 //   event.preventDefault();
@@ -22,10 +22,10 @@ escreverTabela();
 //   $("#clean").click();
 // });
 
-$("#clean").on("click", function () {
-  $("#add").show();
-  $("#update").hide();
-});
+// $("#clean").on("click", function () {
+//   $("#add").show();
+//   $("#update").hide();
+// });
 
 // function obterDados() {
 //   let nome = $("#nome").val();
@@ -60,16 +60,15 @@ $("#clean").on("click", function () {
 //               $("#update").toggle();
 //             },
 //           }),
-          $("<button>", {
-            text: "Delete",
-            class: "btn btn-outline-danger",
-            click: function () {
-              pessoas.splice(pessoas.indexOf(pessoa), 1);
-              escreverTabela();
-            },
-          })
-        )
-      )
-    );
-  });
-}
+//           $("<button>", {
+//             text: "Delete",
+//             class: "btn btn-outline-danger",
+//             click: function () {
+//               pessoas.splice(pessoas.indexOf(pessoa), 1);
+//               escreverTabela();
+//             },
+//           })
+//         )
+//       )
+//     );
+//   });

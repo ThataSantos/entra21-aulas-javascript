@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Cartas Clow</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.css.map">
+
+</head>
+
+<body style="background-color: pink;">
+        <header class="row mt-5">
+        <section class="col">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card">
+                        <form id="buscar_clow">
+                          <div class="card-header"><img src="/Imagens/cardcaptor_sakura_manga_logo_by_joshuat1306_descf2k-fullview.png" alt="Sakura"
+                            class="w-25 img-thumbnail"></div>
+                          <div class="card-body">
+                            <label for="id">Numero</label>
+                            <input type="text" class="form-control" id="param" required />
+                          </div>
+                          <div class="card-footer">
+                            <button id="buscar" class="btn btn-outline-secondary text-dark">
+                              Buscar
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header" id="tipos">
+                          
+                        </div>
+                        <div class="card-body">
+                          <div class="row" id="card_busca">
+                            <div class="col"></div>
+                            <div class="col-4">
+                              <div class="col">
+                                <div class="card"> 
+                                  <div class="card-body text-center" id="buscando"></div>
+                                  <div class="card-footer text-center" id="result"></div>
+                                </div>
+                              </div>
+                            </div>
+  
+                            <div class="col"></div>
+                          </div>
+                        </div>
+                        <div class="card-footer" id="list_cards"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.js.map"></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script src='cartasclow.js'></script>
+</body>
+
+</html>
